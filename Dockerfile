@@ -45,8 +45,7 @@ ENV PLEX_MEDIA_SERVER_MAX_PLUGIN_PROCS=6 \
     TMPDIR=/tmp
 
 COPY root /
-
-VOLUME ["/config", "/media"]
+VOLUME ["/config", "/tv", "movies", "/music"]
 
 EXPOSE 32400
 
