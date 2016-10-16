@@ -2,7 +2,6 @@ version: '2'
 services:
   plex:
     build: .
-    container_name: plex
     image: plex:latest
     ports:
       # for access to the Plex Media Server [required]
