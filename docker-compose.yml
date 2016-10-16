@@ -3,7 +3,7 @@ services:
   plex:
     build: .
     container_name: plex
-    image: plex:tag
+    image: plex:latest
     ports:
       # for access to the Plex Media Server [required]
       - "32400:32400"
