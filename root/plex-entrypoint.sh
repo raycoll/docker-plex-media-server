@@ -80,4 +80,8 @@ tail -Fn 0 '/config/Plex Media Server/Logs/Plex Media Server.log' &
 # Set the stack size
 ulimit -s $PLEX_MAX_STACK_SIZE
 
+# Override # of audio channels for chromecast
+sed -i 's/\(<UpperBound name=\"audio\.channels\" value=\"\)6/\12/' Resources/Profiles/Chromecast.xml
+cat Resources/Profiles/Chromecast.xml
+
 exec "$@"
